@@ -1,4 +1,6 @@
 rootProject.name = 'javalin.jigsaw'
 include 'loadmodules'
 include 'main'
+include 'user'
+include 'pet'
 

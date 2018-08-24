@@ -10,7 +10,11 @@ public class App {
         ServiceLoader<JavalinServerModule> modules = ServiceLoader.load( JavalinServerModule.class );
         if (!modules.iterator().hasNext()) {
             System.out.println( "Hey, I have no services for mount!" );
+        } else {
+            System.out.println("Loading next modules:");
+            modules.forEach( module -> System.out.println("-> " + module.getClass().getSimpleName()) );
         }
+
         final ServerModule serverModule = ServerModule.create( modules );
         var injector = Guice.createInjector( serverModule );
         injector.getInstance( Startup.class ).boot();

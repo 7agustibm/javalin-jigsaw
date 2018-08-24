@@ -1,4 +1,4 @@
-module com.agustibm.javalin.jigsaw.main {
+open module com.agustibm.javalin.jigsaw.main {
     requires com.agustibm.javalin.jigsaw.loadmodules;
     requires com.google.guice;
     requires javalin;

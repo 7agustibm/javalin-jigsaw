@@ -15,6 +15,9 @@ repositories {
 dependencies {
     implementation project(':loadmodules')
 
+    runtimeOnly project(':user')
+    runtimeOnly project(':pet')
+
     compile 'com.google.inject:guice:4.2.0'
     compile 'io.javalin:javalin:2.0.0'
     compile 'org.slf4j:slf4j-simple:1.7.25'

@@ -1,10 +1,17 @@
 package com.agustibm.javalin.jigsaw.main;
 
+import com.agustibm.javalin.jigsaw.loadmodules.Routing;
 import com.google.inject.Inject;
 import io.javalin.Javalin;
 
+import java.util.Collections;
+import java.util.Set;
+
 public class Startup {
     private Javalin app;
+
+    @Inject(optional = true)
+    private Set<Routing> routes = Collections.emptySet();
 
     @Inject
     public Startup(Javalin app) {
@@ -19,6 +26,6 @@ public class Startup {
     }
 
     private void bindRoutes() {
-
+        routes.forEach(r -> r.bindRoutes());
     }
 }

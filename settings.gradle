@@ -3,4 +3,5 @@ include 'loadmodules'
 include 'main'
 include 'user'
 include 'pet'
+include 'repository'
 

@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.agustibm'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.10
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'com.google.inject:guice:4.2.0'
+
+    testImplementation 'junit:junit:4.12'
+}
+
+ext.moduleName = 'com.agustibm.javalin.jigsaw.repository'

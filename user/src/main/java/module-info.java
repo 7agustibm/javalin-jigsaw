@@ -6,6 +6,7 @@ module com.agustibm.javalin.jigsaw.user {
     requires com.agustibm.javalin.jigsaw.loadmodules;
     requires com.google.guice;
     requires javalin;
+    requires com.agustibm.javalin.jigsaw.repository;
 
     uses com.agustibm.javalin.jigsaw.loadmodules.JavalinServerModule;
 

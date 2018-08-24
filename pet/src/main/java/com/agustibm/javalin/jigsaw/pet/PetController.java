@@ -13,6 +13,6 @@ public class PetController {
     }
 
     public void run(Context ctx) {
-        ctx.json(petService.getAllPetUppercase());
+        ctx.json(petService.getAllPet());
     }
 }

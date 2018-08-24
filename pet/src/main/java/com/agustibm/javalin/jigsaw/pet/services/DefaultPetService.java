@@ -1,10 +1,10 @@
 package com.agustibm.javalin.jigsaw.pet.services;
 
+import com.agustibm.javalin.jigsaw.pet.entity.Pet;
 import com.agustibm.javalin.jigsaw.pet.repository.PetRepository;
 import com.google.inject.Inject;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DefaultPetService implements PetService {
     private PetRepository petRepository;
@@ -15,8 +15,8 @@ public class DefaultPetService implements PetService {
     }
 
     @Override
-    public List<String> getAllPetUppercase() {
+    public List<Pet> getAllPet() {
         var pets = petRepository.getAllPets();
-        return pets.parallelStream().map(s -> s.toUpperCase()).collect( Collectors.toList());
+        return pets;
     }
 }
